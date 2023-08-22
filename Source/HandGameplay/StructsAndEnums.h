@@ -13,3 +13,18 @@ enum class EHandGestureEnum : uint8
 	AimingHand,
 	TwoFingerPistol,
 };
+
+UENUM(BlueprintType)
+enum class EElementsEnum : uint8
+{
+	NotSet,
+	Water,
+	Earth,
+	Wind,
+	Fire,
+	Nature,
+	Ice,
+	Steam,
+	Lava,
+	Lighting,
+};
