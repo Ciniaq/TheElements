@@ -9,6 +9,7 @@
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnDeath);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnHealed);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnFullyHealed);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnReceiveDamage);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnStunStart);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnStunEnd);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnFireStart);
@@ -36,6 +37,8 @@ public:
 	FOnFullyHealed OnFullyHealed;
 	UPROPERTY(BlueprintAssignable, Category = "Health")
 	FOnHealed OnHealed;
+	UPROPERTY(BlueprintAssignable, Category = "Damage")
+	FOnReceiveDamage OnReceiveDamage;
 	UPROPERTY(BlueprintAssignable, Category = "Stans")
 	FOnStunStart OnStunStart;
 	UPROPERTY(BlueprintAssignable, Category = "Stans")
@@ -56,7 +59,7 @@ public:
 	UPROPERTY(BlueprintReadWrite, Category="Health")
 	float MaxHealth = 100;
 	UPROPERTY(BlueprintReadWrite, Category="Health")
-	float CurrentHealth;
+	float CurrentHealth = MaxHealth;
 
 	UPROPERTY(BlueprintReadWrite, Category="Speed")
 	float Speed;
