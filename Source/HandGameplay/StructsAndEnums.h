@@ -9,9 +9,18 @@ enum class EHandGestureEnum : uint8
 {
 	NotSet,
 	Victoria,
-	ClenchedHand,
-	AimingHand,
-	TwoFingerPistol,
+	ClenchedHandOld,
+	AimingHandOld,
+	TwoFingerPistolOld,
+	HorizontalThumb,
+	Essa,
+	SpiderMan,
+	Muka,
+	FoldedMuka,
+	HalfOfTriangle,
+	HoldingTennisBall,
+	HighFive,
+	Pinching,
 };
 
 UENUM(BlueprintType)
