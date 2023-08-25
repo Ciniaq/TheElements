@@ -36,4 +36,5 @@ enum class EElementsEnum : uint8
 	Steam,
 	Lava,
 	Lighting,
+	Tornado,
 };
